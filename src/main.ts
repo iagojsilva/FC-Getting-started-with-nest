@@ -9,14 +9,13 @@ async function bootstrap() {
   // Global Pipes
   app.useGlobalPipes(
     new ValidationPipe({
-      errorHttpStatusCode: 422
-    })
-  )
+      errorHttpStatusCode: 422,
+      transform: true,
+    }),
+  );
 
-    // Filters
-    app.useGlobalFilters(
-      new NotFoundErrorFilter()
-    )
+  // Filters
+  app.useGlobalFilters(new NotFoundErrorFilter());
 
   await app.listen(3000);
 }

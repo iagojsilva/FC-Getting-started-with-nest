@@ -2,7 +2,7 @@
 GET http://localhost:3000/products
 
 ### Get One
-GET http://localhost:3000/products/1
+GET http://localhost:3000/products/5
 
 ### Create One
 POST http://localhost:3000/products
@@ -25,3 +25,40 @@ Content-Type: application/json
 
 ### Delete One
 DELETE  http://localhost:3000/products/3
+
+
+
+## Stock Input
+###
+POST http://localhost:3000/stock-input
+Content-Type: application/json
+
+{
+    "productID": 5,
+    "quantity": 5,
+    "date": "2023-11-29"
+}
+
+### Get All
+GET http://localhost:3000/stock-input
+
+### Get One
+GET http://localhost:3000/stock-input/22
+
+
+## Stock Output
+###
+POST http://localhost:3000/stock-output
+Content-Type: application/json
+
+{
+    "productID": 5,
+    "quantity": 5,
+    "date": "2023-11-29"
+}
+
+### Get All
+GET http://localhost:3000/stock-output
+
+### Get One
+GET http://localhost:3000/stock-output/22
